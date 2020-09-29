@@ -1,0 +1,67 @@
+object FrmDataHora: TFrmDataHora
+  Left = 0
+  Top = 0
+  Caption = 'Data / Hora'
+  ClientHeight = 201
+  ClientWidth = 447
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlLeft: TPanel
+    Left = 0
+    Top = 0
+    Width = 185
+    Height = 201
+    Align = alLeft
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitLeft = 280
+    ExplicitTop = 112
+    ExplicitHeight = 41
+  end
+  object pnlRight: TPanel
+    Left = 185
+    Top = 0
+    Width = 262
+    Height = 201
+    Align = alClient
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 1
+    ExplicitLeft = 360
+    ExplicitTop = 112
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object lblTitle: TLabel
+      Left = 1
+      Top = 1
+      Width = 260
+      Height = 14
+      Align = alTop
+      Alignment = taCenter
+      Caption = 'Data / Hora'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitWidth = 73
+    end
+    object lblDataHora: TLabel
+      Left = 6
+      Top = 21
+      Width = 260
+      Height = 185
+      Alignment = taRightJustify
+      Caption = 'lblDataHora'
+    end
+  end
+end

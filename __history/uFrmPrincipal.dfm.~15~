@@ -1,0 +1,257 @@
+object FrmPrincipal: TFrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Trabalhando com Eventos e Componentes Visuais'
+  ClientHeight = 294
+  ClientWidth = 441
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlTop: TPanel
+    Left = 0
+    Top = 0
+    Width = 441
+    Height = 41
+    Align = alTop
+    Caption = 'Titulo alterado com o evento  '#39'onShow'#39
+    Color = clMenu
+    Ctl3D = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Gardenia-Book'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentCtl3D = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 41
+    Width = 441
+    Height = 253
+    ActivePage = aba2
+    Align = alClient
+    TabOrder = 1
+    ExplicitHeight = 259
+    object aba1: TTabSheet
+      Caption = 'Aba 1'
+      ExplicitLeft = 0
+      object GroupBox1: TGroupBox
+        Left = 11
+        Top = 15
+        Width = 185
+        Height = 153
+        Caption = 'Evento onExit to Edit'
+        ParentBackground = False
+        ParentColor = False
+        TabOrder = 0
+        object Label1: TLabel
+          Left = 32
+          Top = 40
+          Width = 90
+          Height = 13
+          Caption = 'Digite 4 caracteres'
+        end
+        object edtCaracteres: TEdit
+          Left = 32
+          Top = 59
+          Width = 121
+          Height = 21
+          TabOrder = 0
+          TextHint = 'Digite 4 caracteres'
+          OnEnter = edtCaracteresEnter
+          OnExit = edtCaracteresExit
+        end
+      end
+      object btnExibirDataHora: TButton
+        Left = 202
+        Top = 15
+        Width = 113
+        Height = 33
+        Caption = 'Exibir outro Form'
+        ImageIndex = 0
+        ImageMargins.Left = 3
+        Images = VirtualImageList1
+        TabOrder = 1
+      end
+      object pnlBottom: TPanel
+        Left = 0
+        Top = 184
+        Width = 433
+        Height = 41
+        Align = alBottom
+        Color = clMenu
+        ParentBackground = False
+        TabOrder = 2
+        ExplicitLeft = 400
+        ExplicitTop = 41
+        ExplicitWidth = 253
+        DesignSize = (
+          433
+          41)
+        object btnNext: TButton
+          Left = 358
+          Top = 9
+          Width = 71
+          Height = 24
+          Anchors = [akRight, akBottom]
+          Caption = 'Proximo'
+          ImageAlignment = iaRight
+          ImageIndex = 2
+          ImageMargins.Right = 3
+          Images = VirtualImageList1
+          TabOrder = 0
+          OnClick = btnNextClick
+        end
+      end
+    end
+    object aba2: TTabSheet
+      Caption = 'Aba 2'
+      ImageIndex = 1
+      ExplicitLeft = 7
+      ExplicitTop = 23
+      ExplicitHeight = 184
+      object rgListaOpcoes: TRadioGroup
+        Left = 9
+        Top = 15
+        Width = 178
+        Height = 82
+        Caption = 'Selecione uma das op'#231#245'es'
+        Columns = 2
+        ItemIndex = 0
+        Items.Strings = (
+          'Delphi'
+          'Python'
+          'PHP'
+          'Java'
+          '.NET ')
+        TabOrder = 0
+      end
+      object lstBxItensSlecionados: TListBox
+        Left = 260
+        Top = 15
+        Width = 154
+        Height = 97
+        ItemHeight = 13
+        TabOrder = 1
+      end
+      object btnAdd: TButton
+        Left = 203
+        Top = 40
+        Width = 41
+        Height = 25
+        Caption = '>>'
+        TabOrder = 2
+        OnClick = btnAddClick
+      end
+    end
+    object aba3: TTabSheet
+      Caption = 'Aba 3'
+      ImageIndex = 2
+      ExplicitHeight = 231
+    end
+  end
+  object VirtualImageList1: TVirtualImageList
+    DisabledGrayscale = False
+    DisabledSuffix = '_Disabled'
+    Images = <
+      item
+        CollectionIndex = 0
+        CollectionName = 'application_add'
+        Disabled = False
+        Name = 'application_add'
+      end
+      item
+        CollectionIndex = 1
+        CollectionName = 'arrow_left'
+        Disabled = False
+        Name = 'arrow_left'
+      end
+      item
+        CollectionIndex = 2
+        CollectionName = 'arrow_right'
+        Disabled = False
+        Name = 'arrow_right'
+      end>
+    ImageCollection = ImageCollection1
+    Left = 408
+    Top = 64
+  end
+  object ImageCollection1: TImageCollection
+    Images = <
+      item
+        Name = 'application_add'
+        SourceImages = <
+          item
+            Image.Data = {
+              89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+              610000000467414D410000AFC837058AE90000001974455874536F6674776172
+              650041646F626520496D616765526561647971C9653C000001FD4944415438CB
+              A5933D6854511085BFB9EF451762142C342E698206B53051586149020A9252C1
+              268D9560A389855818B05558C11F08C6C2C6C24A1131200821A0450C01118D18
+              52588480BB8AC5C645B391BC9D198BF7566397C50B03A7B87CF79C3B33E2EEFC
+              CF91D3971E8D0C1E2FDCA8D6BDDD1D30C3CD5053DC1C73C35531775C153563FB
+              96647571B17CE5E9EDE189B83050186FCBB587DDB9961E6E5FADEB383011D713
+              0FF5EACF96ADAF251E006257E7FA997D2D03CE959649016E00AC371407DC1C35
+              301C3347CDD086A7E5C6BA3ADD9D1DA8690A20EB820441DCF120B83862420882
+              48404491C8892C1037D2FBD6C8004D52005C0404220713307322872011B1808A
+              A321756C6A5904CBE64004DCFF018980AB63022E4010228B5240334253A40C49
+              C50690C5426CC6F4DB495ECD3FA7B6BA42D24858D3FDC049E24692FC712080BB
+              2322F806D08B374F785F9EE2D8C051BA76F6F072E119731FA7298EE66F06CFB2
+              4480642E24D3418420C2E4EB871C3ED08706A56FCF102A09C543FD0023C1CCFE
+              46C83E3388106DA86FDFBFD026DB3875F02200974FDC67EFAE5E805C5C5E5A7E
+              7CFE4E326CAA981AAA8A99A149829961EE546B2B2C546699AFCC3036F480D2D4
+              5972D156805FB2996D2C8EE6AF7575EFB8DADF3B484FE7113E7D7DC7EC87193E
+              2FD56EC966D7B9389A2F0117800EE007706FEE6E65EC377C930E97A09C4BD300
+              00000049454E44AE426082}
+          end>
+      end
+      item
+        Name = 'arrow_left'
+        SourceImages = <
+          item
+            Image.Data = {
+              89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+              610000000467414D410000AFC837058AE90000001974455874536F6674776172
+              650041646F626520496D616765526561647971C9653C000000EB4944415438CB
+              63FCFFFF3F03258089814230C80C283D91C906C4BB493180058D7FF5EF9FBF32
+              A418C0088B05A0CD17C5D924F4FEFCF9C3F0F0FD43865F3F7F33FCFA01C2BF18
+              7E023198FE8E6083E42EF45F6564816A3E29C62AAEA7C0ADC4F0E7DF1F06196E
+              3930FDFBEF5F20FECDF0FB1F10FFFD031503D1BF1956AF5C8BF002D0D9BFFF30
+              FE61F8F5F71758D11FA0A2DF60C5BF1134D40090DC9FFF40B15F7F50BD90B933
+              EEBC309B8801073327C3C3970F195EBF7F83D5D920AF8134FFF9FD87E1FEC247
+              8C8CC829317655C84DA04239A006C70D693B4E901C8D40CDBA40CD0789D58CE2
+              85119C1700E3A1BBBC7A5AD3C90000000049454E44AE426082}
+          end>
+      end
+      item
+        Name = 'arrow_right'
+        SourceImages = <
+          item
+            Image.Data = {
+              89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+              610000000467414D410000AFC837058AE90000001974455874536F6674776172
+              650041646F626520496D616765526561647971C9653C000000EF4944415438CB
+              63FCFFFF3F03258089814230C40C0898E5B1DB6B92131BD906FCFAF1CBE6E7F7
+              5F5791C51841B1507A22131C157FFFFC65F8F3FB0FC3EF5F7F187EFDFC0DD400
+              C2BF187E02318896149264F8F5EB37C3CDDBB72E9D6ABFA00FD2C30233C94AD8
+              96E1EF3FA001FFFEC0F1EFBF7F81F837C3EF7F40FC1726F687E1CB97AF7A5A59
+              6A27AF4DBB65CE02B319A410AE19A8E83758F16F04FD1721F7EBF76F902B7FC3
+              5D0072F6FE877BB13A1BE867309B8B838B4152528AE1F5ABD70CB76FDCBD707B
+              CE3D1B781810030C0AB52D8016EC07DAFC08A8599DE458B8D07FF50450F341A0
+              6B7531626184E7050008E7C037DD6CACD00000000049454E44AE426082}
+          end>
+      end>
+    Left = 408
+    Top = 112
+  end
+end

@@ -1,0 +1,134 @@
+unit uFrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.ComCtrls, Vcl.StdCtrls,
+  System.ImageList, Vcl.ImgList, Vcl.BaseImageCollection, Vcl.ImageCollection,
+  Vcl.VirtualImageList;
+
+type
+  TFrmPrincipal = class(TForm)
+    pnlTop: TPanel;
+    PageControl1: TPageControl;
+    aba1: TTabSheet;
+    aba2: TTabSheet;
+    aba3: TTabSheet;
+    VirtualImageList1: TVirtualImageList;
+    ImageCollection1: TImageCollection;
+    GroupBox1: TGroupBox;
+    Label1: TLabel;
+    edtCaracteres: TEdit;
+    btnExibirDataHora: TButton;
+    pnlBottom: TPanel;
+    btnNext1: TButton;
+    rgListaOpcoes: TRadioGroup;
+    lstBxItensSlecionados: TListBox;
+    btnAdd: TButton;
+    btnClear: TButton;
+    Panel1: TPanel;
+    btnNext2: TButton;
+    btnPrevius2: TButton;
+    Panel2: TPanel;
+    btnPrevius3: TButton;
+    procedure edtCaracteresEnter(Sender: TObject);
+    procedure edtCaracteresExit(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure btnNext1Click(Sender: TObject);
+    procedure btnAddClick(Sender: TObject);
+    procedure btnClearClick(Sender: TObject);
+    procedure btnPrevius2Click(Sender: TObject);
+    procedure btnNext2Click(Sender: TObject);
+    procedure btnPrevius3Click(Sender: TObject);
+
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TFrmPrincipal.btnAddClick(Sender: TObject);
+begin
+  if rgListaOpcoes.ItemIndex >= 0 then
+  begin
+    lstBxItensSlecionados.Items.Add(rgListaOpcoes.Items[rgListaOpcoes.ItemIndex]);
+    rgListaOpcoes.ItemIndex := -1;
+  end
+  else
+  begin
+    MessageDlg('Você não selecionou nenhum item', mtWarning, [mbOK], 0);
+  end;
+
+end;
+
+procedure TFrmPrincipal.btnClearClick(Sender: TObject);
+begin
+  lstBxItensSlecionados.Items.Clear;
+end;
+
+procedure TFrmPrincipal.btnNext1Click(Sender: TObject);
+begin
+  PageControl1.ActivePageIndex := 1;
+end;
+
+procedure TFrmPrincipal.btnNext2Click(Sender: TObject);
+begin
+  PageControl1.ActivePageIndex := 2;
+end;
+
+procedure TFrmPrincipal.btnPrevius2Click(Sender: TObject);
+begin
+  PageControl1.ActivePageIndex := 0;
+end;
+
+procedure TFrmPrincipal.btnPrevius3Click(Sender: TObject);
+begin
+  PageControl1.ActivePageIndex := 2;
+end;
+
+procedure TFrmPrincipal.edtCaracteresEnter(Sender: TObject);
+begin
+  edtCaracteres.Color := $00B9FFFF;
+end;
+
+
+procedure TFrmPrincipal.edtCaracteresExit(Sender: TObject);
+begin
+  if edtCaracteres.Text = '' then
+  begin
+    MessageDlg('Você não digitou nenhum conteudo', mtError, [mbOK], 0);
+    edtCaracteres.SetFocus;
+  end
+  else
+  begin
+    if Length(edtCaracteres.Text) <> 4 then
+    begin
+      MessageDlg('Você não digitou 4 caracteres', mtError, [mbOK], 0);
+      edtCaracteres.SetFocus;
+      edtCaracteres.SelectAll;
+    end
+    else
+    begin
+      edtCaracteres.Color := clWindow;
+    end;
+  end;
+end;
+
+procedure TFrmPrincipal.FormShow(Sender: TObject);
+begin
+  pnlTop.Caption := 'Aprendendo Delphi';
+end;
+
+
+
+end.
